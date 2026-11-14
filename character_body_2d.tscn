@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://batgldnp22mck"]
+
+[ext_resource type="Texture2D" uid="uid://c1ou245cwvd3l" path="res://Assets/spritesheet.png" id="1_f50pn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij6vw"]
+atlas = ExtResource("1_f50pn")
+region = Rect2(0, 0, 153, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j3o88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij6vw")
+}],
+"loop": 1,
+"name": &"Running forward",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=621632265]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=274193532]
+sprite_frames = SubResource("SpriteFrames_j3o88")
+animation = &"Running forward"
